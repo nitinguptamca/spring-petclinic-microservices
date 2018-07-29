@@ -1,0 +1,14 @@
+server:
+  port: 9411
+spring:
+  cloud:
+    config:
+      uri: http://localhost:8888
+  application:
+    name: tracing-server
+---
+spring:
+  profiles: docker
+  cloud:
+    config:
+      uri: http://config-server:8888
